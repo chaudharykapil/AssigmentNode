@@ -25,7 +25,7 @@ function AnalyseBlogs(bloglist){
   res.longest_title = longestTitleBlog.title
 
   // get no of blogs related to term 'privacy'
-  const privacyBlogs = lodash.filter(bloglist, blog => lodash.includes(blog.title.toLowerCase(), 'privacy'));
+  const privacyBlogs = query_blog_memo(bloglist,"privacy");
   const numPrivacyBlogs = privacyBlogs.length;
   res.privacy_blogs_no = numPrivacyBlogs;
 
